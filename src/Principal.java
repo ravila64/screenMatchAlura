@@ -1,4 +1,5 @@
 import model.Pelicula;
+import model.Persona;
 
 public class Principal {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Principal {
         pelicula.sumarEvaluaciones(7.8);
         pelicula.sumarEvaluaciones(10.0);
         pelicula.muestraFichaTecnica();
-        System.out.println(pelicula.mediaEvaluaciones());
+        System.out.println("Media de "+pelicula.nombre+ " es: "+pelicula.mediaEvaluaciones());
 
         Pelicula pelicula1 = new Pelicula();
         pelicula1.nombre = "Matrix";
@@ -19,6 +20,21 @@ public class Principal {
         pelicula1.sumarEvaluaciones(9.5);
         pelicula1.sumarEvaluaciones(10);
         pelicula1.muestraFichaTecnica();
-        System.out.println(pelicula1.mediaEvaluaciones());
+        System.out.println("Media de "+pelicula1.nombre+ " es: "+pelicula1.mediaEvaluaciones());
+
+        Persona persona = new Persona();
+        persona.nombre = "Ana";
+        persona.edad = 20;
+        System.out.println(persona.toString());
+        persona.cumplirAnios();
+        System.out.println(persona.toString());
+
+        Persona persona2 = new Persona();
+        persona2.nombre = "Carlos";
+        persona2.edad = 30;
+        System.out.println(persona2.toString());
+        persona2.cumplirAnios();
+        System.out.println(persona2.toString());
+
     }
 }
