@@ -5,8 +5,8 @@ public class Pelicula {
     public int fechaLanzamiento;
     public int duracionEnMinutos;
     public boolean incluidoEnPlan;
-    public double sumaEvaluaciones;
-    public int numeroEvaluaciones;
+    private double sumaEvaluaciones;
+    private int numeroEvaluaciones;
 
     public void muestraFichaTecnica() {
         System.out.println("Pelicula{" +
