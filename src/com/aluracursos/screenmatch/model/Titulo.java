@@ -28,18 +28,22 @@ public class Titulo {
         return nombre;
     }
 
-    public int getNumeroEvaluaciones() {
-        return numeroEvaluaciones;
+    public int getFechaLanzamiento() {
+        return fechaLanzamiento;
     }
 
-    public double getSumaEvaluaciones() {
-        return sumaEvaluaciones;
+    public boolean isIncluidoEnPlan() {
+        return incluidoEnPlan;
     }
 
-    public void muestraFichaTecnica() {
-        System.out.println("Pelicula{" +
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public void muestraFichaTecnica(String tipo) {
+        System.out.println(tipo+" {" +
                 "nombre='" + nombre + '\'' +
-                ", duracion En Minutos=" + duracionEnMinutos +
+                ", duracion En Minutos=" + getDuracionEnMinutos() +
                 ", fecha de Lanzamiento=" + fechaLanzamiento +
                 ", incluido En Plan=" + incluidoEnPlan +
                 // ", suma Evaluaciones=" + sumaEvaluaciones +

@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.model;
+package com.aluracursos.screenmatch.examples;
 public class Producto {
     String nombre;
     double precio;

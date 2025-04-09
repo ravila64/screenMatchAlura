@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.model;
+package com.aluracursos.screenmatch.examples;
 public class Persona {
     private String nombre;
     private int edad;

@@ -1,5 +1,6 @@
 import com.aluracursos.screenmatch.model.Pelicula;
-import com.aluracursos.screenmatch.model.Persona;
+import com.aluracursos.screenmatch.examples.Persona;
+import com.aluracursos.screenmatch.model.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Principal {
         pelicula.setIncluidoEnPlan(true);
         pelicula.sumarEvaluaciones(7.8);
         pelicula.sumarEvaluaciones(10.0);
-        pelicula.muestraFichaTecnica();
+        pelicula.muestraFichaTecnica("Pelicula");
         System.out.println("Media de "+pelicula.getNombre()+ " es: "+pelicula.mediaEvaluaciones());
 
         Pelicula pelicula1 = new Pelicula();
@@ -20,7 +21,7 @@ public class Principal {
         pelicula1.sumarEvaluaciones(8.9);
         pelicula1.sumarEvaluaciones(9.5);
         pelicula1.sumarEvaluaciones(10);
-        pelicula1.muestraFichaTecnica();
+        pelicula1.muestraFichaTecnica("Pelicula");
         System.out.println("Media de "+pelicula1.getNombre()+ " es: "+pelicula1.mediaEvaluaciones());
 
         Persona persona = new Persona();
@@ -43,6 +44,16 @@ public class Principal {
         System.out.println("Nombre-2 "+persona2.getNombre());
         System.out.println("Edad-2   "+persona2.getEdad());
 
+        Serie casaDragon = new Serie();
+        casaDragon.setNombre("la casa del dragón");
+        casaDragon.setFechaLanzamiento(2022);
+        casaDragon.setTemporadas(1);
+        casaDragon.setMinutosPorEpidisodio(50);
+        casaDragon.setEpisodiosPorTemporada(10);
+        System.out.println("Muestra Ficha Tecnica");
+        casaDragon.muestraFichaTecnica("Serie");
+        // ahi esta llamando el metodo de la serie @Override
+        System.out.println(casaDragon.getDuracionEnMinutos());
 
     }
 }

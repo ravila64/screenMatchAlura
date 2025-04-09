@@ -1,18 +1,27 @@
-package com.aluracursos.screenmatch.model;
+package com.aluracursos.screenmatch.examples;
 
 public class Cuenta {
     private int numero;
     private int agencia;
     private double saldo;
 
-    public void deposita(double valor) {
-        saldo += valor;
+    public void depositar(double valor)
+    {
+        if (valor > 0){
+            saldo += valor;
+            System.out.println("Deposito realizado con exito !!! "+saldo);
+        }else {
+            System.out.println("El valor debe ser mayor a cero");
+        }
     }
 
-    public void retira(double valor) {
-        if (valor <= saldo) {
+    public void retirar(double valor) {
+        if (valor <= 0) {
+            System.out.println("El valor debe ser mayor a cero");
+        } else if(saldo >= valor){
             saldo -= valor;
-        } else {
+            System.out.println("Retiro realizado con exito, nuevo saldo "+saldo);
+        }else {
             System.out.println("Saldo insuficiente.");
         }
     }
