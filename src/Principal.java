@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.model.Pelicula;
 import com.aluracursos.screenmatch.examples.Persona;
 import com.aluracursos.screenmatch.model.Serie;
@@ -55,5 +56,12 @@ public class Principal {
         // ahi esta llamando el metodo de la serie @Override
         System.out.println(casaDragon.getDuracionEnMinutos());
 
+        CalculadoraDeTiempo calculadoraDeTiempo=new CalculadoraDeTiempo();
+        calculadoraDeTiempo.incluye(pelicula);
+//      System.out.println("Tiempo Total pelicula "+calculadoraDeTiempo.getTiempoTotal()+" min");
+        calculadoraDeTiempo.incluye(casaDragon);
+//      System.out.println("Tiempo Total serie "+calculadoraDeTiempo.getTiempoTotal()+" min");
+        calculadoraDeTiempo.incluye(pelicula1);
+        System.out.println("Tiempo Total peliculas+series "+calculadoraDeTiempo.getTiempoTotal()+" min");
     }
 }
