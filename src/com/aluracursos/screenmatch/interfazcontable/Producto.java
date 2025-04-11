@@ -15,10 +15,6 @@ public class Producto implements Tributable{
         return this.valor * 0.1;
     }
 
-    @Override
-    public int contarValores() {
-        return 1;
-    }
     //getters y setters
 
     public String getNombre() {
@@ -35,5 +31,13 @@ public class Producto implements Tributable{
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "nombre='" + nombre + '\'' +
+                ", valor=" + valor +
+                '}';
     }
 }
