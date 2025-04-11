@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.herencia_interfaz;
+package com.aluracursos.screenmatch.herenciainterfaz;
 
 public class CalculadoraImpuesto {
     private double totalImpuesto = 0;

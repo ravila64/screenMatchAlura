@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.herencia_interfaz;
+package com.aluracursos.screenmatch.herenciainterfaz;
 
 public class Servicio extends Item implements Tributable{
     private int cantidadHoras;
