@@ -56,7 +56,7 @@ public class Titulo {
         numeroEvaluaciones++;
     }
 
-    public double mediaEvaluaciones() {
+    public double calculaMediaEvaluaciones() {
         return (sumaEvaluaciones / numeroEvaluaciones);
     }
 }

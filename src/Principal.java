@@ -1,4 +1,6 @@
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
+import com.aluracursos.screenmatch.model.Episodio;
 import com.aluracursos.screenmatch.model.Pelicula;
 import com.aluracursos.screenmatch.examples.Persona;
 import com.aluracursos.screenmatch.model.Serie;
@@ -13,7 +15,7 @@ public class Principal {
         pelicula.sumarEvaluaciones(7.8);
         pelicula.sumarEvaluaciones(10.0);
         pelicula.muestraFichaTecnica("Pelicula");
-        System.out.println("Media de "+pelicula.getNombre()+ " es: "+pelicula.mediaEvaluaciones());
+        System.out.println("Media de "+pelicula.getNombre()+ " es: "+pelicula.calculaMediaEvaluaciones());
 
         Pelicula pelicula1 = new Pelicula();
         pelicula1.setNombre("Matrix");
@@ -23,7 +25,7 @@ public class Principal {
         pelicula1.sumarEvaluaciones(9.5);
         pelicula1.sumarEvaluaciones(10);
         pelicula1.muestraFichaTecnica("Pelicula");
-        System.out.println("Media de "+pelicula1.getNombre()+ " es: "+pelicula1.mediaEvaluaciones());
+        System.out.println("Media de "+pelicula1.getNombre()+ " es: "+pelicula1.calculaMediaEvaluaciones());
 
         Persona persona = new Persona();
         persona.setNombre("Juan");
@@ -63,5 +65,20 @@ public class Principal {
 //      System.out.println("Tiempo Total serie "+calculadoraDeTiempo.getTiempoTotal()+" min");
         calculadoraDeTiempo.incluye(pelicula1);
         System.out.println("Tiempo Total peliculas+series "+calculadoraDeTiempo.getTiempoTotal()+" min");
+
+        // filtro
+        FiltroRecomendacion filtroRecomendacion= new FiltroRecomendacion();
+        filtroRecomendacion.filtra(pelicula);
+
+        // Episodio
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("La casa Targaryen");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(50);
+        filtroRecomendacion.filtra(episodio);
+
+        //hacer el llamado de interfazContable
+
     }
 }
