@@ -6,7 +6,7 @@ import static com.aluracursos.screenmatch.annotation.ValidarUsuario.validador;
 
 public class Main {
     public static void main(String[] args) {
-        Usuario usuario = new Usuario(LocalDate.of(1995, Month.MARCH, 14), "42198284863", "Maria");
+        Usuario usuario = new Usuario(LocalDate.of(1995, Month.MARCH, 14), "42198284863", "Juan23");
         if (validador(usuario)) {
             System.out.println("Datos correctos de usuario");
         } else {
@@ -16,7 +16,7 @@ public class Main {
         if (validador(usuario2)) {
             System.out.println("Datos correctos de usuario2 " + usuario2.getNombre());
         } else {
-            System.out.println("Usuario con datos invalidos " + usuario2.getNombre());
+            System.out.println("Usuario "+ usuario2.getNombre()+", con datos invalidos ");
         }
     }
 }
